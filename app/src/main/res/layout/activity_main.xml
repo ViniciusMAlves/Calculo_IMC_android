@@ -8,27 +8,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="273dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="1dp">
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="6dp">
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Informe o seu nome"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/edtPeso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:hint="Informe o seu peso"/>
+            android:hint="Informe o seu peso"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/edtAltura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:hint="Informe a sua altura em cm"/>
+            android:hint="Informe a sua altura em cm"
+            android:inputType="number" />
 
         <Button
             android:id="@+id/btnCalcular"
@@ -36,13 +44,14 @@
             android:layout_height="wrap_content"
             android:text="Calcular IMC" />
 
-        <TextView
-            android:id="@+id/lblResultado"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            tools:listitem="@layout/recyclerview_item"
+            android:layout_marginTop="22dp" />
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
