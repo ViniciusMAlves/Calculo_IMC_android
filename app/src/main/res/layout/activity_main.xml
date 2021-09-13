@@ -40,6 +40,7 @@
 
         <Button
             android:id="@+id/btnCalcular"
+            android:onClick="calculatIMC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calcular IMC" />
